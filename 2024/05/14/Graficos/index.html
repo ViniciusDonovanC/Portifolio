@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="keywords" content="hexo, autumn" />
+    <title>
+        Hexo
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
+     
+<link rel="stylesheet" href="/Portifolio/css/style.css">
+
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+
+    <script>
+        infiniteScroll()
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
+
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
+
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
+
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
+
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+    <div class="container">
+        <header class="header">
+    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/Portifolio/" class="logo">
+                Hexo
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
+
+    <button class="ipad-menu menu">menu</button>
+
+    <h1 class="title" id="main-title">
+        <a href="/Portifolio/" class="logo">
+            Hexo
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <div class="links">
+        <ul>
+            
+            <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ViniciusDonovanC">
+                    Github
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</header>
+        <main class="main">
+            <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        Graficos
+    </h2>
+    <ul class="post-date">
+        <li>
+            2024-05-14
+        </li>
+        <li>
+            Vinicius Donovan
+        </li>
+    </ul>
+    <div class="post-content">
+        <p>Bubble Sort:</p>
+<img src="/Portifolio/2024/05/14/Graficos/bubble.png" class="">
+
+<p>Selection Sort:</p>
+<img src="/Portifolio/2024/05/14/Graficos/insertion.png" class="">
+
+<p>Insertion Sort:</p>
+<img src="/Portifolio/2024/05/14/Graficos/merge.png" class="">
+
+<p>Merge Sort:</p>
+<img src="/Portifolio/2024/05/14/Graficos/selection.png" class="">
+
+<p>Grafico de Comparação Geral:</p>
+<img src="/Portifolio/2024/05/14/Graficos/geral.png" class="">
+
+<p>Vetores usados para o teste</p>
+<p>Vetor de 10 elementos</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr_10 = [<span class="number">14</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">12</span>, <span class="number">25</span>, <span class="number">23</span>, <span class="number">20</span>, <span class="number">24</span>, <span class="number">26</span>, <span class="number">28</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Vetor de 20 elementos</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr_20 = [<span class="number">23</span>, <span class="number">19</span>, <span class="number">27</span>, <span class="number">25</span>, <span class="number">21</span>, <span class="number">30</span>, <span class="number">29</span>, <span class="number">28</span>, <span class="number">26</span>, <span class="number">22</span>, <span class="number">24</span>, <span class="number">20</span>, <span class="number">18</span>, <span class="number">17</span>, <span class="number">16</span>, <span class="number">15</span>, <span class="number">14</span>, <span class="number">13</span>, <span class="number">12</span>, <span class="number">11</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Vetor de 30 elementos</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arr_30 = [<span class="number">37</span>, <span class="number">26</span>, <span class="number">15</span>, <span class="number">48</span>, <span class="number">39</span>, <span class="number">21</span>, <span class="number">32</span>, <span class="number">53</span>, <span class="number">14</span>, <span class="number">45</span>, <span class="number">36</span>, <span class="number">27</span>, <span class="number">18</span>, <span class="number">49</span>, <span class="number">30</span>, <span class="number">11</span>, <span class="number">52</span>, <span class="number">23</span>, <span class="number">34</span>, </span><br><span class="line">            <span class="number">55</span>, <span class="number">16</span>, <span class="number">47</span>, <span class="number">38</span>, <span class="number">29</span>, <span class="number">20</span>, <span class="number">51</span>, <span class="number">12</span>, <span class="number">43</span>, <span class="number">24</span>, <span class="number">35</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Vetor de 40 elementos</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr_40 = [<span class="number">88</span>, <span class="number">77</span>, <span class="number">66</span>, <span class="number">55</span>, <span class="number">44</span>, <span class="number">33</span>, <span class="number">22</span>, <span class="number">11</span>, <span class="number">0</span>, <span class="number">99</span>, <span class="number">98</span>, <span class="number">97</span>, <span class="number">96</span>, <span class="number">95</span>, <span class="number">94</span>, <span class="number">93</span>, <span class="number">92</span>, <span class="number">91</span>, <span class="number">90</span>, <span class="number">89</span>, </span><br><span class="line">            <span class="number">78</span>, <span class="number">67</span>, <span class="number">56</span>, <span class="number">45</span>, <span class="number">34</span>, <span class="number">23</span>, <span class="number">12</span>, <span class="number">1</span>, <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">60</span>, <span class="number">70</span>, <span class="number">80</span>, <span class="number">90</span>, <span class="number">100</span>, <span class="number">110</span>, </span><br><span class="line">            <span class="number">120</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Vetor de 50 elementos</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr_50 = [<span class="number">5</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>, <span class="number">23</span>, <span class="number">29</span>, <span class="number">31</span>, <span class="number">37</span>, <span class="number">41</span>, <span class="number">43</span>, <span class="number">47</span>, <span class="number">53</span>, </span><br><span class="line">            <span class="number">59</span>, <span class="number">61</span>, <span class="number">67</span>, <span class="number">71</span>, <span class="number">73</span>, <span class="number">79</span>, <span class="number">83</span>, <span class="number">89</span>, <span class="number">97</span>, <span class="number">101</span>, <span class="number">103</span>, <span class="number">107</span>, <span class="number">109</span>, <span class="number">113</span>, <span class="number">127</span>, <span class="number">131</span>, <span class="number">137</span>, </span><br><span class="line">            <span class="number">139</span>, <span class="number">149</span>, <span class="number">151</span>, <span class="number">157</span>, <span class="number">163</span>, <span class="number">167</span>, <span class="number">173</span>, <span class="number">179</span>, <span class="number">181</span>, <span class="number">191</span>, <span class="number">193</span>]</span><br></pre></td></tr></table></figure>
+
+<p>Vetor de 60 elementos</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr_60 = [<span class="number">64</span>, <span class="number">34</span>, <span class="number">25</span>, <span class="number">12</span>, <span class="number">22</span>, <span class="number">11</span>, <span class="number">90</span>, <span class="number">45</span>, <span class="number">78</span>, <span class="number">56</span>, <span class="number">89</span>, <span class="number">23</span>, <span class="number">67</span>, <span class="number">88</span>, <span class="number">19</span>, <span class="number">100</span>, <span class="number">53</span>, <span class="number">41</span>, <span class="number">77</span>, <span class="number">85</span>,</span><br><span class="line">            <span class="number">10</span>, <span class="number">54</span>, <span class="number">29</span>, <span class="number">83</span>, <span class="number">47</span>, <span class="number">68</span>, <span class="number">91</span>, <span class="number">30</span>, <span class="number">39</span>, <span class="number">72</span>, <span class="number">13</span>, <span class="number">76</span>, <span class="number">38</span>, <span class="number">27</span>, <span class="number">59</span>, <span class="number">33</span>, <span class="number">95</span>, <span class="number">16</span>, <span class="number">20</span>, <span class="number">63</span>,</span><br><span class="line">            <span class="number">7</span>, <span class="number">84</span>, <span class="number">28</span>, <span class="number">50</span>, <span class="number">71</span>, <span class="number">36</span>, <span class="number">92</span>, <span class="number">49</span>, <span class="number">66</span>, <span class="number">80</span>, <span class="number">8</span>, <span class="number">62</span>, <span class="number">40</span>, <span class="number">99</span>, <span class="number">15</span>, <span class="number">35</span>, <span class="number">79</span>, <span class="number">44</span>, <span class="number">86</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+    </div>
+</article>
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
+
+    
+
+            </section>
+            <section class="aside-section">
+                
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/Portifolio/archives/2024/">2024</a></li></ul>
+
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    
+
+            </section>
+        </aside>
+    </div>
+</body>
+
+</html>
